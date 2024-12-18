@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body{
+    height: 100%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.head{
+    height: 100vh;
+}
+.container {
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.linkA a {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.linkA a.active {
+    background-color: black;
+    color: white;
+}
+
+.card {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.form {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}

@@ -99,12 +99,12 @@ function Masala2() {
         const users = JSON.parse(localStorage.getItem("user")) || [];
         setUser(users);
     }, []);
-    function onDel(id){
-        const con = confirm()
-        if(con){
-            const filtUser = user.filter((item) => item.id !== id)
-            setUser(filtUser)
-            localStorage.setItem('user', JSON.stringify(filtUser))
+    function onDel(id) {
+        const con = confirm("Haqiqatan ham ochirmoqchimisiz?");
+        if (con) {
+            const filtUser = user.filter((item) => item.id !== id);
+            setUser(filtUser);
+            localStorage.setItem("user", JSON.stringify(filtUser));
         }
     }
     return (
@@ -169,7 +169,14 @@ function Masala2() {
                                 </div>
                                 <h1>email: {data.email}</h1>
                                 <h1>Age: {data.age}</h1>
-                                <button className="px-3 bg-red-500 rounded-md" onClick={() => {onDel(data.id)}}>Delete</button>
+                                <button
+                                    className="px-3 bg-red-500 rounded-md"
+                                    onClick={() => {
+                                        onDel(data.id);
+                                    }}
+                                >
+                                    Delete
+                                </button>
                             </div>
                         );
                     })
